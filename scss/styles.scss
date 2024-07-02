@@ -25,6 +25,8 @@
         10. Contact Styles
         11. Optional Section Styles
         12. Media Queries
+        13. Publications Styles
+        14. Honors Styles
 */
 
 /*
@@ -656,6 +658,60 @@ footer {
 
 /*
     -------------------------------
+    ----- 13. Publications Styles -----
+    -------------------------------
+*/
+
+#publications {
+    padding: 50px 15px 20px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+}
+
+.publications-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid $border;
+    text-align: left;
+
+    h3 {
+        font-weight: 500;
+        float: left;
+        margin: 0;
+        color: $heading;
+    }
+
+    span {
+        color: $text;
+        float: right;
+    }
+
+    h4 {
+        color: $text;
+        clear: both;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+    }
+
+    p, ul {
+        margin: 0;
+        color: $text;
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding: 0 0 0 15px;
+    }
+}
+
+/*
+    -------------------------------
     ----- 8. Project Styles -----
     -------------------------------
 */
@@ -988,6 +1044,181 @@ footer {
 }
 
 /*
+    -------------------------------
+    ----- 14. Honors Styles -----
+    -------------------------------
+*/
+
+#honors {
+    padding: 50px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.honors {
+    position: relative;
+    min-width: 300px;
+    height: 300px;
+    max-width: 900px;
+    margin:0 15px 30px 15px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.honors-game {
+    position: relative;
+    max-width: 900px;
+    height: 300px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+
+    display: flex;
+}
+
+.honors-game .honors-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.honors-game .honors-image img {
+    width: 100%;
+}
+
+.honors-info {
+    align-self: center;
+    flex-grow: 1;
+    padding: 15px;
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        color: $heading;
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        color: $text;
+        margin: 0 0 15px 0;
+        font-size: 0.9em;
+    }
+}
+
+.no-image {
+    .honors-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        transform: none;
+    }
+}
+
+#more-honors {
+    display: none;
+}
+
+/* Style the Image Used to Trigger the Modal */
+.honors-image{
+    .image {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .image:hover {opacity: 0.7;}
+}
+.honors-video{
+    .image {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .image:hover {opacity: 0.7;}
+}
+.honors-glb{
+    .image {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .image:hover {opacity: 0.7;}
+}
+
+/* The Modal (background) */
+.overlay-viewer{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 85%;
+    max-width: 1200px;
+}
+.modal-content { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.glb-content{
+    margin: auto;
+    display: block;
+    width: 85%;
+    height: 85%;
+    max-width: 1200px;
+    background: #fff;
+
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+.overlay-viewer .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.overlay-viewer .close:hover,
+.overlay-viewer .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*
     -----------------------------
     ----- 12. Media Queries -----
     -----------------------------
@@ -1151,3 +1382,4 @@ footer {
     }
 
 }
+/*
